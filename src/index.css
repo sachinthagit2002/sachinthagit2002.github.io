@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  }
+}
+
+.bg-analytical-grid {
+  background-image: radial-gradient(rgba(15, 118, 110, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-analytical-grid {
+  background-image: radial-gradient(rgba(45, 212, 191, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
