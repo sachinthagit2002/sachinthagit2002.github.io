@@ -26,6 +26,7 @@ export interface Project {
   technologies: string[];
   benchmarks?: ProjectBenchmark[];
   benchmarkDatasetNote?: string;
+  uiScreenshot?: { src: string; caption: string };
   screenshots?: { src: string; caption: string }[];
   repoScopeNote?: string;
   visualType: 'ml-pipeline' | 'mvc-booking' | 'pet-web' | 'mobile-app' | 'microservices';
@@ -127,6 +128,10 @@ export const PROJECTS: Project[] = [
     ],
     benchmarkDatasetNote:
       'Verified from ml-service/model_metadata.json in the repository (655 cleaned records, 131 test samples, trained 2026-11-19).',
+    uiScreenshot: {
+      src: '/images/projects/autovaluate-ui.jpg',
+      caption: 'AutoValuate Web Application — Price Predictor & Market Index Interface',
+    },
     screenshots: [
       {
         src: '/images/projects/autovaluate-model-comparison.png',

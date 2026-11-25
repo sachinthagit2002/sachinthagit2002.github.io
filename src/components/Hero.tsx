@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ArrowRight,
   BarChart3,
@@ -12,6 +12,8 @@ import {
 import { PROFILE } from '../data/profile';
 
 export const Hero: React.FC = () => {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <section
       id="top"
@@ -101,13 +103,22 @@ export const Hero: React.FC = () => {
           <div className="min-w-0 lg:col-span-5">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/90">
               <div className="flex items-center gap-4 border-b border-slate-100 pb-5 dark:border-slate-800">
-                <div
-                  className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-teal-200 bg-slate-900 text-2xl font-extrabold tracking-tight text-white dark:border-teal-700/60 dark:bg-teal-500/15 dark:text-teal-300"
-                  aria-label="Initials monogram SD"
-                >
-                  {PROFILE.initials}
-                </div>
-                <div>
+                {!imgError ? (
+                  <img
+                    src={PROFILE.profileImage}
+                    alt={`${PROFILE.name} graduation portrait`}
+                    onError={() => setImgError(true)}
+                    className="h-24 w-24 shrink-0 rounded-2xl border border-teal-200 object-cover object-[50%_20%] shadow-sm dark:border-teal-700/60"
+                  />
+                ) : (
+                  <div
+                    className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-teal-200 bg-slate-900 text-2xl font-extrabold tracking-tight text-white dark:border-teal-700/60 dark:bg-teal-500/15 dark:text-teal-300"
+                    aria-label="Initials monogram SD"
+                  >
+                    {PROFILE.initials}
+                  </div>
+                )}
+                <div className="min-w-0">
                   <p className="text-sm font-bold text-slate-900 dark:text-white">
                     {PROFILE.shortName}
                   </p>

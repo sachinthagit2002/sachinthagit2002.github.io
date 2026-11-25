@@ -167,6 +167,29 @@ export const ProjectsSection: React.FC = () => {
                 </div>
 
                 <div className="space-y-6 lg:col-span-5">
+                  {featured.uiScreenshot && (
+                    <figure className="overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-sm dark:border-slate-800">
+                      <button
+                        type="button"
+                        onClick={() => setZoomImage(featured.uiScreenshot!)}
+                        className="group relative block w-full cursor-zoom-in overflow-hidden"
+                        title="Click to enlarge AutoValuate UI screenshot"
+                      >
+                        <img
+                          src={featured.uiScreenshot.src}
+                          alt={featured.uiScreenshot.caption}
+                          className="aspect-[16/9] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                        />
+                        <span className="absolute bottom-2 right-2 rounded-md bg-slate-950/75 px-2 py-0.5 font-mono text-[10px] text-white backdrop-blur-sm">
+                          Click to enlarge
+                        </span>
+                      </button>
+                      <figcaption className="border-t border-slate-800 bg-white px-4 py-2.5 text-xs text-slate-600 dark:bg-slate-900 dark:text-slate-300">
+                        {featured.uiScreenshot.caption}
+                      </figcaption>
+                    </figure>
+                  )}
+
                   <div className="rounded-xl border border-slate-200 bg-slate-50/70 p-5 dark:border-slate-800 dark:bg-slate-950/60">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                       Verified Features Implemented

@@ -2,6 +2,7 @@ export interface ProfileInfo {
   name: string;
   shortName: string;
   initials: string;
+  profileImage: string;
   title: string;
   location: string;
   email: string;
@@ -22,6 +23,7 @@ export const PROFILE: ProfileInfo = {
   name: 'Sachintha Danuka Karunathilaka',
   shortName: 'Sachintha Danuka',
   initials: 'SD',
+  profileImage: '/images/profile.jpg',
   title: 'Aspiring Data Analyst | Data Science Undergraduate',
   location: 'Kegalle, Sri Lanka',
   email: 'sachinthadanukak@gmail.com',
