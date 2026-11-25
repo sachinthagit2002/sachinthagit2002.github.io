@@ -2,6 +2,7 @@ export interface JourneyItem {
   period: string;
   title: string;
   context: string;
+  url?: string;
   description: string;
   tags: string[];
   highlight?: boolean;
@@ -9,13 +10,22 @@ export interface JourneyItem {
 
 export const JOURNEY_TIMELINE: JourneyItem[] = [
   {
+    period: 'Mar 2, 2026 – Oct 2026',
+    title: 'Software Engineering Intern & Full-Stack Developer',
+    context: 'iTexphere · Completed Industry Internship',
+    url: 'https://www.itexphere.com/',
+    description:
+      'Completed an eight-month Software Engineering Intern and Full-Stack Developer placement at iTexphere, contributing to software and full-stack web development workflows alongside Data Science undergraduate studies.',
+    tags: ['Software Engineering', 'Full-Stack Development', 'Industry Internship'],
+    highlight: true,
+  },
+  {
     period: '2026 (In Progress)',
     title: 'Final-Year Data Science Project & SQL Upskilling',
     context: 'BSc (Hons) Data Science · London Metropolitan University',
     description:
       'Engineered Auto Valuate (web scraping, IQR outlier cleaning, multi-model ML benchmarking with CatBoost/XGBoost/SHAP, and RAG verification) while completing LinkedIn Learning SQL & MySQL data analysis certifications.',
     tags: ['Python', 'CatBoost', 'SHAP', 'SQL', 'MySQL'],
-    highlight: true,
   },
   {
     period: '2026',

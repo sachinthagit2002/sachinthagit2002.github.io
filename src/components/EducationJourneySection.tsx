@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, GraduationCap, Milestone } from 'lucide-react';
+import { Calendar, ExternalLink, GraduationCap, Milestone } from 'lucide-react';
 import { EDUCATION } from '../data/education';
 import { JOURNEY_TIMELINE } from '../data/journey';
 
@@ -70,16 +70,16 @@ export const EducationJourneySection: React.FC = () => {
           </div>
 
           {/* JOURNEY TIMELINE */}
-          <div className="lg:col-span-6">
+          <div className="min-w-0 lg:col-span-6">
             <p className="font-mono text-xs font-semibold uppercase tracking-widest text-teal-700 dark:text-teal-400">
-              05 / Academic Journey
+              05 / Experience &amp; Journey
             </p>
             <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-              Learning &amp; Project Timeline
+              Experience &amp; Learning Timeline
             </h2>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-              Focused on academic development, technical projects, and career readiness for Data
-              Analyst roles.
+              Industry internship experience alongside academic Data Science and software
+              engineering milestones.
             </p>
 
             <div className="relative mt-8 space-y-6 border-l-2 border-slate-200 pl-6 dark:border-slate-800">
@@ -102,9 +102,22 @@ export const EducationJourneySection: React.FC = () => {
                     <h3 className="mt-1 text-base font-bold text-slate-900 dark:text-white">
                       {step.title}
                     </h3>
-                    <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                      {step.context}
-                    </p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                        {step.context}
+                      </p>
+                      {step.url && (
+                        <a
+                          href={step.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 font-mono text-[11px] font-semibold text-teal-700 hover:underline dark:text-teal-400"
+                        >
+                          itexphere.com
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      )}
+                    </div>
                     <p className="mt-2 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
                       {step.description}
                     </p>

@@ -80,10 +80,30 @@ export const CvSection: React.FC = () => {
                   </p>
                   <p className="mt-1 leading-relaxed text-slate-600 dark:text-slate-300">
                     Data Science undergraduate (BSc Hons Top-Up) with a Higher Diploma in Computing
-                    and Software Engineering (2023–2025). Experienced in SQL querying, Python data
-                    cleaning, machine learning model evaluation, SHAP explainability, and full-stack
-                    web systems.
+                    and Software Engineering (2023–2025) and completed internship experience as a
+                    Software Engineering Intern &amp; Full-Stack Developer at iTexphere. Experienced
+                    in SQL querying, Python data cleaning, ML evaluation, and SHAP explainability.
                   </p>
+                </div>
+
+                <div>
+                  <p className="font-bold uppercase tracking-wider text-slate-400">Experience</p>
+                  <div className="mt-1.5 flex items-baseline justify-between gap-2">
+                    <span className="font-semibold text-slate-800 dark:text-slate-200">
+                      Software Engineering Intern &amp; Full-Stack Developer —{' '}
+                      <a
+                        href="https://www.itexphere.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-teal-700 hover:underline dark:text-teal-400"
+                      >
+                        iTexphere
+                      </a>
+                    </span>
+                    <span className="shrink-0 font-mono text-[11px] text-slate-500">
+                      Mar – Oct 2026
+                    </span>
+                  </div>
                 </div>
 
                 <div>
