@@ -55,10 +55,10 @@ export const CvSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 dark:border-slate-800 dark:bg-slate-900">
               <div className="flex flex-wrap items-start justify-between gap-2 border-b border-slate-200 pb-4 dark:border-slate-800">
-                <div>
+                <div className="min-w-0">
                   <h3 className="text-lg font-extrabold text-slate-900 dark:text-white">
                     {PROFILE.name}
                   </h3>
@@ -66,7 +66,7 @@ export const CvSection: React.FC = () => {
                     {PROFILE.title}
                   </p>
                 </div>
-                <div className="text-right font-mono text-[11px] text-slate-500 dark:text-slate-400">
+                <div className="text-left font-mono text-[11px] text-slate-500 sm:text-right dark:text-slate-400">
                   <p>{PROFILE.location}</p>
                   <p>{PROFILE.email}</p>
                   <p>{PROFILE.mobile}</p>

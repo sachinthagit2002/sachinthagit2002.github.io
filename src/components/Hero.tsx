@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/90">
               <div className="flex items-center gap-4 border-b border-slate-100 pb-5 dark:border-slate-800">
                 <div

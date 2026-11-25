@@ -38,21 +38,21 @@ export const ContactSection: React.FC = () => {
         </div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-12">
-          <div className="space-y-4 lg:col-span-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <div className="min-w-0 space-y-4 lg:col-span-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 dark:border-slate-800 dark:bg-slate-900">
               <div className="space-y-4">
-                <div className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-slate-50/70 p-4 dark:border-slate-800 dark:bg-slate-950/60">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-300">
+                <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-100 bg-slate-50/70 p-4 dark:border-slate-800 dark:bg-slate-950/60">
+                  <div className="flex min-w-0 flex-1 items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-teal-700 dark:bg-teal-950 dark:text-teal-300">
                       <Mail className="h-5 w-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
                         Email
                       </p>
                       <a
                         href={`mailto:${PROFILE.email}`}
-                        className="text-sm font-semibold text-slate-900 hover:text-teal-700 dark:text-white dark:hover:text-teal-400"
+                        className="block break-all text-sm font-semibold text-slate-900 hover:text-teal-700 dark:text-white dark:hover:text-teal-400"
                       >
                         {PROFILE.email}
                       </a>
@@ -61,7 +61,7 @@ export const ContactSection: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleCopyEmail}
-                    className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                    className="inline-flex shrink-0 items-center gap-1 rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
                     aria-label="Copy email address"
                   >
                     {copied ? (
@@ -127,7 +127,7 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="min-w-0 lg:col-span-6">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
               <h3 className="text-base font-bold text-slate-900 dark:text-white">
                 Compose an Email
