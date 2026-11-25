@@ -124,7 +124,7 @@ export const ProjectsSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="p-6 sm:p-8">
+          <div className="min-w-0 p-6 sm:p-8">
             {activeTab === 'overview' && (
               <div className="grid gap-8 lg:grid-cols-12">
                 <div className="space-y-6 lg:col-span-7">
@@ -197,7 +197,7 @@ export const ProjectsSection: React.FC = () => {
             )}
 
             {activeTab === 'benchmarks' && (
-              <div className="space-y-6">
+              <div className="min-w-0 space-y-6">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
                     <h4 className="text-sm font-bold text-slate-900 dark:text-white">
@@ -209,7 +209,7 @@ export const ProjectsSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+                <div className="max-w-full overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
                   <table className="min-w-full divide-y divide-slate-200 text-left text-sm dark:divide-slate-800">
                     <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:bg-slate-950 dark:text-slate-400">
                       <tr>
