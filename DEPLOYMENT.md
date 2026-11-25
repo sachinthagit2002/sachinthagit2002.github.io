@@ -47,15 +47,17 @@ Vercel provides automatic HTTPS, global CDN, clean URLs (`vercel.json` is alread
 
 ---
 
-## 3. Option B: Deploy to GitHub Pages (`sachinthagi2002.github.io`)
+## 3. Option B: Deploy to GitHub Pages (`sachinthagit2002.github.io`)
 
-`public/CNAME` is already included with `sachinthadanuka.com`.
+This repository includes `.github/workflows/deploy.yml`, which automatically runs `npm ci`, `npm run build`, and deploys `./dist` to GitHub Pages on every push to `main`.
 
-1. Push the project to `https://github.com/sachinthagit2002/sachinthagi2002.github.io.git`.
-2. Add a GitHub Actions workflow (`.github/workflows/deploy.yml`) or publish the `dist/` folder to `gh-pages`.
-3. In GitHub **Repository Settings → Pages**:
-   - Set **Custom domain** to `sachinthadanuka.com`.
-   - Enable **Enforce HTTPS** once DNS propagates.
+1. Ensure the remote points to `https://github.com/sachinthagit2002/sachinthagit2002.github.io.git`.
+2. In GitHub **Repository Settings → Pages → Build and deployment**:
+   - Set **Source** to **GitHub Actions** (not *Deploy from a branch*).
+3. Your primary site will be served at `https://sachinthagit2002.github.io/`.
+4. **When you are ready to connect your custom domain (`sachinthadanuka.com`):**
+   - Configure the DNS records below at your domain registrar first.
+   - Then enter `sachinthadanuka.com` in GitHub **Settings → Pages → Custom domain** (or add `public/CNAME` containing `sachinthadanuka.com`), and enable **Enforce HTTPS** once DNS propagates.
 
 ### DNS Records for GitHub Pages (configure at your domain registrar)
 

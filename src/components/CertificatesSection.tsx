@@ -55,7 +55,7 @@ export const CertificatesSection: React.FC = () => {
           {visible.map((cert) => (
             <article
               key={cert.id}
-              className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+              className="flex min-w-0 flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
             >
               <div>
                 <div className="flex items-center justify-between gap-2">
@@ -89,9 +89,9 @@ export const CertificatesSection: React.FC = () => {
                   ))}
                 </div>
                 {cert.credentialId && (
-                  <p className="mt-2.5 flex items-center gap-1 truncate font-mono text-[10px] text-slate-400" title={cert.credentialId}>
+                  <p className="mt-2.5 flex min-w-0 items-center gap-1 font-mono text-[10px] text-slate-400" title={cert.credentialId}>
                     <ShieldCheck className="h-3 w-3 shrink-0 text-teal-600 dark:text-teal-400" />
-                    <span className="truncate">ID: {cert.credentialId}</span>
+                    <span className="min-w-0 truncate">ID: {cert.credentialId}</span>
                   </p>
                 )}
               </div>
